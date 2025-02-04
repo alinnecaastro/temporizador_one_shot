@@ -21,23 +21,23 @@ https://drive.google.com/file/d/1hFp7RoonCgcqu9AKGjFybk2F3y6eqCJv/view?usp=shari
 https://drive.google.com/file/d/1-Tv3v2VtjqgrzVyx8CsMGfiXQHiEUawk/view?usp=sharing
 
 ## Funcionalidades do Projeto
-° O sistema começa com os três LEDs acessos, quando o botão é pressionado.
-° O temporizador é configurado com um atraso de 3 segundos. Cade vez que o temporizador dispara, ele chama uma função de callback para alternar o estado dos LEDs
-°No primeiro estado: Todos os três estão acesos.
-° No segundo estado após 3 segundos: Dois LEDs permanecem acesos, e o terceiro desligado.
-° No terceiro estado após mais 3 segundos: Apenas um LED permanece aceso, enquanto os outros dois são desligados.
-°O botão A inicia a sequência de LEDs, mas só pode fazer isso quando o último LED já estiver apagado, ou seja, a troca so pode ser feita quando a última transição (Desligado) for completada, quando o botão inicia ele proprio não poderá chamar uma nova chamada de função.
+- O sistema começa com os três LEDs acessos, quando o botão é pressionado.
+- O temporizador é configurado com um atraso de 3 segundos. Cade vez que o temporizador dispara, ele chama uma função de callback para alternar o estado dos LEDs
+- No primeiro estado: Todos os três estão acesos.
+-  No segundo estado após 3 segundos: Dois LEDs permanecem acesos, e o terceiro desligado.
+-  No terceiro estado após mais 3 segundos: Apenas um LED permanece aceso, enquanto os outros dois são desligados.
+- O botão A inicia a sequência de LEDs, mas só pode fazer isso quando o último LED já estiver apagado, ou seja, a troca so pode ser feita quando a última transição (Desligado) for completada, quando o botão inicia ele proprio não poderá chamar uma nova chamada de função.
 
 ## Requisitos do Projeto
-° Os LEDs devem ser controlados através de um botão (GPIO 05)
-° Inicialmente, todos os LEDs devem estar apagados;
-° Após o acionamento do botão, a sequência de LEDs deve ser controlada conforme os seguintes estados:
+- ° Os LEDs devem ser controlados através de um botão (GPIO 05)
+- ° Inicialmente, todos os LEDs devem estar apagados;
+- ° Após o acionamento do botão, a sequência de LEDs deve ser controlada conforme os seguintes estados:
       Estado 1: Todos os LEDs acesos.
       Estado 2: Dois LEDs acesos, um LED apagado.
       Estado 3: Apenas um LED aceso, dois LEDs apagados.
-° Cada mudança de estado deve ocorrer a cada 3 segundos (3.000ms), utilizando um temporizador.
-° A mudança de estado dos LEDs deve ser feita dentro de funções de callback do temporizador (exemplo: turn_off_callback()).
-° O botão (GPIO 05) deve ser capaz de iniciar a sequência de LEDs, mas somente quando o último LED for apagado. Ou seja, o botão não pode reiniciar a sequência enquanto o temporizador ainda estiver em execução ou enquanto algum LED não tiver sido apagado.
+- ° Cada mudança de estado deve ocorrer a cada 3 segundos (3.000ms), utilizando um temporizador.
+- ° A mudança de estado dos LEDs deve ser feita dentro de funções de callback do temporizador (exemplo: turn_off_callback()).
+- ° O botão (GPIO 05) deve ser capaz de iniciar a sequência de LEDs, mas somente quando o último LED for apagado. Ou seja, o botão não pode reiniciar a sequência enquanto o temporizador ainda estiver em execução ou enquanto algum LED não tiver sido apagado.
 
 ## Configuração do Ambiente
 1. Instale o SDK do Raspberry Pi Pico:
