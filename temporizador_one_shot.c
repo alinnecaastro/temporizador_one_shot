@@ -19,7 +19,7 @@ int64_t change_led_state_callback(alarm_id_t id, void *user_data) {
         // Desliga o LED vermelho após 3 segundos
         gpio_put(LED_AZUL, false);
         led_red_active = false;
-        printf("Tempo: %d segundos | Dois LEDs ligados (Azul e Verde,)\n",elapsed_time);
+        printf("Tempo: %d segundos | Dois LEDs ligados (Vermelho e Verde,)\n",elapsed_time);
     } else if (!led_red_active && led_azul_active && led_green_active) {
         // Desliga o LED azul após mais 3 segundos
         gpio_put(LED_RED, false);
